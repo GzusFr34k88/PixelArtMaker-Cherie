@@ -32,29 +32,45 @@ $("#buttonPaint").on("click", function makeGrid(event) {
     });
 });
 
-//create paint on canvas
-table.on("click", ".box", function (e) {
+function colorBox(e) {
     const background = color.val();
-    const thisBox = e.target;
-    if (thisBox.className.includes(background)) {
-        thisBox.className = "box";
+    const thisBox = $(e.target);
+    if (e.target.className.includes(background)) {
+        e.target.className = "box";
+        console.log("No longer includes background");
     }
     else {
-        thisBox.className = ("box " + background);
+        e.target.className = ("box " + background);
+        console.log("Now includes background");
     }
-    console.log(thisBox.className);
-    if (thisBox.className.includes(background)) {
-        $(this).css("background-color", background);
+    if (e.target.className.includes(background)) {
+        thisBox.css("background", background);
+        console.log('The color of this box is now ' + background);
     }
     else {
-        $(this).css("background-color", "transparent");
+        thisBox.css("background", "transparent");
+        console.log('The color of this box is now transparent');
     }
-});
+    console.log(e.target.className);
+}
 
-$("table").on("mousemove mouseenter mouseleave mouseover", "td", function (e) {
-    if (e.which === 1) {
-        let background = color.val();
-        $(this).css("background-color", background);
+let drag = false;
+//create paint on canvas
+
+//When mouse is held down calls the colorCell() function and pass the event to the function
+table.on('mousedown', '.box', function (e) {
+    colorBox(e);
+    drag = true; //changes drag to true
+})
+//When mouse is lifted changes drag to false
+.on('mouseup mouseleave', function () {
+    drag = false;
+})
+
+//While drag is true, drag the mouse over a cell to call the colorCell function and pass the event to the function
+.on('mouseover', '.box', function (e) {
+    if (drag) {
+        colorBox(e);
     }
 });
 
