@@ -1,0 +1,47 @@
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <!--google font-->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700|Rammetto+One');
+    </style>
+
+    <!--jQuery cdn-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1>My Virtual Canvas</h1>
+    <h2>Challenge: Sketch A
+        <span id="idea"> Flag</span>.</h2>
+
+    <form id="sizePicker">
+
+        Grid Height:
+        <input type="number" class="chooseThis" id="inputHeight" name="height" min="1" value="20">
+        <br /> Grid Width:
+        <input type="number" class="chooseThis" id="inputWidth" name="width" min="1" value="20">
+        <br />
+
+    </form>
+
+    <button id="buttonPaint" onclick="hideFunction()">PAINT!</button>
+    <button id="random" onclick="pickRandomWord()"> NEW IDEA</button>
+    <button id="buttonClear" onclick="showFunction"> DELETE ALL</button>
+
+    <p class="artDirections">Click on colored boxes to delete.</p>
+    <p>Screenshoot images to save ones you like!</p>
+
+    Color:
+    <input type="color" class="chooseThis" id="colorPicker">
+    <br />
+
+    <table id="pixelCanvas"></table>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

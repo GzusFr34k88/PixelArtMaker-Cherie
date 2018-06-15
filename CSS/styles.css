@@ -1,0 +1,93 @@
+body {
+   text-align: center;
+   background-image: url("https://orig00.deviantart.net/40d7/f/2013/362/3/6/3664949b485a544c9df70f4ffc9c6898-d6zq3mw.gif");
+   background-repeat: no-repeat;
+   background-size: cover;
+   /* background-position: right bottom, left top; */
+   /* background-repeat: no-repeat, repeat; */
+   /* padding: 15px; */
+   -moz-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+h1 {
+  font-family: "Rammetto One", Monoton;
+  font-size: 70px;
+  margin: 0.2em;
+}
+
+h2 {
+  margin: 1em 0 0.25em;
+  font-family: "PT Sans", arial;
+  font-size: 40px;
+}
+
+h2:first-of-type {
+  margin-top: 0.5em;
+}
+
+table,
+tr,
+td {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  margin-top: 0px;
+}
+
+tr {
+  height: 20px;
+}
+
+td {
+  width: 20px;
+}
+
+input[type="number"] {
+  width: 6em;
+}
+
+#buttonPaint,
+#random,
+#buttonClear {
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+#idea {
+  font-weight: bold;
+  text-decoration: underline;
+  color: black;
+}
+
+.chooseThis {
+  margin-bottom: 20px;
+}
+
+form {
+  /* border-style: solid pink; */
+  margin: auto;
+  width: 20%;
+  padding: 5px;
+}
+
+p {
+  color: gray;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.artDirections {
+  padding-top: 20px;
+}
